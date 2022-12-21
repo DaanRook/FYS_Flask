@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}LandingsPage{% endblock %}
+{% block content %}
+    <div class="waviy">
+        <span style="--i:1">W</span>
+        <span style="--i:2">E</span>
+        <span style="--i:3">L</span>
+        <span style="--i:4">C</span>
+        <span style="--i:5">O</span>
+        <span style="--i:6">M</span>
+        <span style="--i:7">E</span>
+        <span style="--i:8">!</span>             
+    </div>
+    <img src="{{ url_for('static', filename='Eco_illustration.png')}}" alt="Illustration not loading.." class="frontimage">
+    <div class="footer">
+        <p>Copyright &copy; 2022 Team E (FYS).</p>
+    </div>
+{% endblock %}

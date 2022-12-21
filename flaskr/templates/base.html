@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='FaviconCorendon.png')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='Style.CSS') }}">
+    </head>
+
+    <body>
+        <div class="banner">
+            <div class="navbar"> 
+                <img src="{{ url_for('static', filename='corendon.png')}}" class="logo">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/infopage">Info</a></li>
+                    <li><a href="/entertainmentpage">Entertainment</a></li>
+                    <li><a href="/WeatherPagina">Weather</a></li>
+                </ul>           
+            </div>
+            {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>
