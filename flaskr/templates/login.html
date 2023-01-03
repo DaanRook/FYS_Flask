@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Corendon_Wifi_Login</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='Style.CSS') }}">
+    </head>
+
+    <body>
+        <div class="banner">
+            <div class="loginfront"> 
+                    <h1>Login Page Corendon</h1>
+            </div>
+
+            <div class="content">
+                {% block content %}
+	                {% with messages = get_flashed_messages() %}
+		                {% if messages %}
+			                {% for msg in messages %}
+				                <p>{{msg}}</p>
+			                {% endfor %}
+		                {% endif %}
+	                {% endwith %}
+                {% endblock %}
+                <h1>
+                    Log in with your name and ticketnumber!
+                </h1>
+
+                <div>
+                    <input type="name" ><span></span>Name</input>
+                    <input type="surname" ><span></span>Surname</input>
+
+                    <input type="password"><span></span>Ticket Number</input>
+
+
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
