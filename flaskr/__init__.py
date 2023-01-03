@@ -8,21 +8,21 @@ app.secret_key = "BrunoBroodje"
 #De maximale tijd dat data mag worden opgeslagen in een sessie.
 app.permanent_session_lifetime = timedelta(days=1)
 
-cnx = mysql.connector.connect(user='your_username',
-                             password='your_password',
-                             host='your_host',
-                             database='your_database')
+cnx = mysql.connector.connect(user='root',
+                             password='Inkkeval@hva22',
+                             host='127.0.0.1',
+                             database='cor_edb')
 
 cursor = cnx.cursor()
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        username = request.form["username"]
-        password = request.form["password"]
+        achternaam = request.form["achternaam"]
+        ticketnummer = request.form["ticketnummer"]
 
         #Query de database voor de 2 waarden die nodig zijn om in te mogen loggen.
-        cursor.execute("SELECT * FROM users WHERE username = %s AND password = %s", (username, password))
+        cursor.execute("SELECT * FROM Passagiers WHERE ticketnummer = %s AND achternaam = %s", (ticketnummer, achternaam))
         user = cursor.fetchone()
 
         #Als de login correct is mag je door naar de landingspagina.
