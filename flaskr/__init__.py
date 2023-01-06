@@ -27,7 +27,7 @@ def login():
 
         #Als de login correct is mag je door naar de landingspagina.
         if user is not None:
-            session["username"] = username
+            session["achternaam"] = achternaam
             return redirect("/landingspagina")
         
         #Als de login niet kloppend is word er een waarschuwing gegeven.
@@ -41,16 +41,24 @@ def login():
 @app.route("/landingspagina")
 def landingspagina():
     #Checkt of de user is ingelogd.
-    if "username" in session:
-        return render_template("landingspagina.html", username=session["username"])
+    if "achternaam" in session:
+        return render_template("landingspagina.html", achternaam=session["achternaam"])
     else:
         return redirect("/login")
 
 @app.route("/logout")
 def logout():
     #Haalt de user weg van de sessie.
-    session.pop("username", None)
+    session.pop("achternaam", None)
+    flash('You were logged out!')
     return redirect("/login")
+
+@app.route("/entertainmentpage")
+def entertainmentpage():
+    if "achternaam" in session:
+        return render_template("entertainmentpage.html", achternaam=session["achternaam"])
+    else:
+        return redirect("/login")
 
 
 if __name__ == "__main__":
