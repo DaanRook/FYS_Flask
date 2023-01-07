@@ -9,11 +9,15 @@ app.secret_key = "BrunoBroodje"
 app.permanent_session_lifetime = timedelta(days=1)
 
 cnx = mysql.connector.connect(user='root',
-                             password='Inkkeval@hva22',
-                             host='127.0.0.1',
+                             password='Rookie1241',
+                             host='localhost',
                              database='cor_edb')
 
 cursor = cnx.cursor()
+
+@app.route("/")
+def home():
+    return redirect("/login")
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -22,13 +26,13 @@ def login():
         ticketnummer = request.form["ticketnummer"]
 
         #Query de database voor de 2 waarden die nodig zijn om in te mogen loggen.
-        cursor.execute("SELECT * FROM Passagiers WHERE ticketnummer = %s AND achternaam = %s", (ticketnummer, achternaam))
+        cursor.execute("SELECT * FROM passagier WHERE ticketnummer = %s AND achternaam = %s", (ticketnummer, achternaam))
         user = cursor.fetchone()
 
         #Als de login correct is mag je door naar de landingspagina.
         if user is not None:
             session["achternaam"] = achternaam
-            return redirect("/landingspagina")
+            return redirect("/landingspage")
         
         #Als de login niet kloppend is word er een waarschuwing gegeven.
         else:
@@ -38,11 +42,11 @@ def login():
     #Als de request method GET is word de login pagina weergeven.
     return render_template("login.html")
         
-@app.route("/landingspagina")
+@app.route("/landingspage")
 def landingspagina():
     #Checkt of de user is ingelogd.
     if "achternaam" in session:
-        return render_template("landingspagina.html", achternaam=session["achternaam"])
+        return render_template("landingspage.html", achternaam=session["achternaam"])
     else:
         return redirect("/login")
 
@@ -60,6 +64,12 @@ def entertainmentpage():
     else:
         return redirect("/login")
 
+@app.route("/weatherpage")
+def weatherpage():
+    if "achternaam" in session:
+        return render_template("weatherpage.html", achternaam=session["achternaam"])
+    else:
+        return redirect("/login")
 
 if __name__ == "__main__":
 	app.run(debug=True)

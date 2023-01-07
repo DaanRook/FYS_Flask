@@ -78,7 +78,7 @@ html {
 .content{
     width: 100%;
     position: relative;
-    top: 50%;
+    top: 25%;
     transform: translateY(-50%);
     text-align: center;
     align-items: center;
@@ -139,7 +139,7 @@ button:hover{
 }
 
 .weather{
-    margin-top: 10vw;
+
 }
 
 #ww_c125aca3b3adb{

@@ -2,6 +2,7 @@
     <head>
         <title>Corendon_Wifi_Login</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='Style.CSS') }}">
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='FaviconCorendon.png')}}">
     </head>
 
     <body>
@@ -24,10 +25,17 @@
                     Log in with your name and ticketnumber!
                 </h1>
 
-                <div>
-                    <input type="achternaam"><span></span>achternaam</input>
-                    <input type="ticketnummer"><span></span>Ticket Number</input>
-                </div>
+                
+                    <form action="#" method="post">
+                    <label for="lname"><b>Lastname</b></label>
+                    <input type="achternaam" placeholder="Enter Lastname" name="achternaam" required>
+
+                    <label for="tnmb"><b>ticketnumber</b></label>
+                    <input type="ticketnummer" placeholder="Enter ticketnummer" name="ticketnummer" required>
+
+                    <button type="submit">Login</button>
+                    </form>
+                
             </div>
         </div>
     </body>
