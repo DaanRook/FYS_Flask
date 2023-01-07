@@ -71,5 +71,13 @@ def weatherpage():
     else:
         return redirect("/login")
 
+@app.route("/infopage")
+def infopage():
+    if "achternaam" in session:
+        return render_template("infopage.html", achternaam=session["achternaam"])
+    else:
+        return redirect("/login")
+
+
 if __name__ == "__main__":
 	app.run(debug=True)
