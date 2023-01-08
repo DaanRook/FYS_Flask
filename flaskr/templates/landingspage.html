@@ -2,7 +2,7 @@
 {% block title %}LandingsPage{% endblock %}
 {% block content %}
     <div class="waviy">
-        {{achternaam}}
+        <u>{{achternaam}}</u>
         <span style="--i:1">W</span>
         <span style="--i:2">E</span>
         <span style="--i:3">L</span>
@@ -12,16 +12,11 @@
         <span style="--i:7">E</span>
         <span style="--i:8">!</span>           
     </div>
-    {% if error %}
-        <p>{{error}}</p>
-    {% endif %}
-    {% if collection %} 
-        <p>{{collection}}</p>
-    {% endif %}
     <img src="{{ url_for('static', filename='Eco_illustration.png')}}" alt="Illustration not loading.." class="frontimage">
     <div class="footer">
-        <p>Copyright &copy; 2022 Team E (FYS).</p> <div class="content">
+        <p>Copyright &copy; 2022 Team E (FYS).</p> 
+     <div class="content">
     Your now allowed to use the internet! For any questions regarding the rules and usage please ask the staff.
-    </div>
+     </div>
     </div>
 {% endblock %}

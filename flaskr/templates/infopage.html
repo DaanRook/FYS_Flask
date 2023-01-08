@@ -1,27 +1,35 @@
 {% extends "base.html" %}
 {% block title %}Infopage{% endblock %}
 {% block content %}
-            <div class="infotable">
-                <table>
-                    <tr>
-                        <th>Ticketnumber</th>
-                        <th>Surname</th>
-                        <th>Lastname</th>
-                        <th>Flightnumber</th>
-                        <th>ETA</th>
-                        <th>Time of departure</th>
-                    </tr>
-                        {% for user in passagier %}
-                        <tr>
-                            <td>{{ user[0] }}</td>
-                            <td>{{ user[1] }}</td>
-                            <td>{{ user[2] }}</td>
-                            <td>{{ user[3] }}</td>
-                            <td>{{ user[4] }}</td>
-                            <td>{{ user[5] }}</td>
-                        </tr>
-                        {% endfor %}
-                </table>
+    <h1>INFO</h1>
+            <div class="content">
+            <table>
+            <tr>
+                {% if row %}
+                    <th>Ticketnummer:</th>
+                    <th>Surname:</th>
+                    <th>Lastname:</th>
+                    <th>Flightnumber:</th>
+                    <th>ETA:</th>
+                    <th>Time of departure:</th>
+            <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>{{ row[4].strftime("%Y-%m-%d %H:%M") }}</td>
+                    <td>{{ row[5].strftime("%Y-%m-%d %H:%M") }}</td>
+            </tr>
+                {% else %} 
+                    <p>Ticketnumber: 0</p>
+                    <p>Surname: 0</p>
+                    <p>Lastname: 0</p>
+                    <p>Flightnumber: 0</p>
+                    <p>ETA: 0</p>
+                    <p>Time of departure; 0</p>
+                {% endif %}
+            </tr>
+            </table>
             </div>
             <div class="footer">
                 <p>Copyright &copy; 2022 Team E (FYS).</p>

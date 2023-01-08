@@ -138,10 +138,6 @@ button:hover{
     
 }
 
-.weather{
-
-}
-
 #ww_c125aca3b3adb{
     transform: scale(1.5);
 }
@@ -164,7 +160,7 @@ button:hover{
   position: fixed;
   top: 45%;
   left: 25%;
-  opacity: 75%;
+  opacity: 80%;
 }
 
 .waviy {
@@ -210,8 +206,6 @@ button:hover{
     font-size: 30px;
 }
 
-.b{
-    color: white;
-}
+
 
 
