@@ -2,7 +2,26 @@
 {% block title %}Infopage{% endblock %}
 {% block content %}
             <div class="infotable">
-                
+                <table>
+                    <tr>
+                        <th>Ticketnumber</th>
+                        <th>Surname</th>
+                        <th>Lastname</th>
+                        <th>Flightnumber</th>
+                        <th>ETA</th>
+                        <th>Time of departure</th>
+                    </tr>
+                        {% for user in passagier %}
+                        <tr>
+                            <td>{{ user[0] }}</td>
+                            <td>{{ user[1] }}</td>
+                            <td>{{ user[2] }}</td>
+                            <td>{{ user[3] }}</td>
+                            <td>{{ user[4] }}</td>
+                            <td>{{ user[5] }}</td>
+                        </tr>
+                        {% endfor %}
+                </table>
             </div>
             <div class="footer">
                 <p>Copyright &copy; 2022 Team E (FYS).</p>

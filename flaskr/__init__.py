@@ -54,7 +54,7 @@ def landingspagina():
 def logout():
     #Haalt de user weg van de sessie.
     session.pop("achternaam", None)
-    flash('You were logged out!')
+    flash('You were logged out! Please login again if you want to use the internet.')
     return redirect("/login")
 
 @app.route("/entertainmentpage")

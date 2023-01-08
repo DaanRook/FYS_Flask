@@ -119,7 +119,7 @@ button:hover span{
     width: 100%;
 }
 button:hover{
-    border: none;
+    border-color: gray;
 }
 
 .imageEntertainment{
@@ -160,6 +160,7 @@ button:hover{
 }
 
 .frontimage {
+  max-width: 60%;
   position: fixed;
   top: 45%;
   left: 25%;
@@ -207,6 +208,10 @@ button:hover{
     background: url(WallpaperSky.jpg);
     color: white;
     font-size: 30px;
+}
+
+.b{
+    color: white;
 }
 
 
