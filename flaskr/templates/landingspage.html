@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block title %}LandingsPage{% endblock %}
 {% block content %}
+    <div class="fronttext">
     <div class="waviy">
         <u>{{achternaam}}</u>
         <span style="--i:1">W</span>
@@ -11,6 +12,7 @@
         <span style="--i:6">M</span>
         <span style="--i:7">E</span>
         <span style="--i:8">!</span>           
+    </div>
     </div>
     <img src="{{ url_for('static', filename='Eco_illustration.png')}}" alt="Illustration not loading.." class="frontimage">
     <div class="footer">

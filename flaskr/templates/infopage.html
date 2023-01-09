@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block title %}Infopage{% endblock %}
 {% block content %}
-    <h1>INFO</h1>
             <div class="content">
-            <table>
+            <table class="center">
+                <h1>INFO</h1>
             <tr>
                 {% if row %}
                     <th>Ticketnummer:</th>
@@ -20,13 +20,6 @@
                     <td>{{ row[4].strftime("%Y-%m-%d %H:%M") }}</td>
                     <td>{{ row[5].strftime("%Y-%m-%d %H:%M") }}</td>
             </tr>
-                {% else %} 
-                    <p>Ticketnumber: 0</p>
-                    <p>Surname: 0</p>
-                    <p>Lastname: 0</p>
-                    <p>Flightnumber: 0</p>
-                    <p>ETA: 0</p>
-                    <p>Time of departure; 0</p>
                 {% endif %}
             </tr>
             </table>

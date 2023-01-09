@@ -22,8 +22,12 @@ def home():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        achternaam = request.form["achternaam"]
+        achternaam = request.form["achternaam"].lower()
         ticketnummer = request.form["ticketnummer"]
+
+        #Maak het zo dat de ingevoerde waarde voor achternaam alles kan zijn (kleine letter/grote letter) zolang het de goede naam is.
+        #Eerst word de naam klein gemaakt en daarna krijgt hij een hoofdletter zodat de naam goed geprint word op de landingspagina.
+        achternaam = achternaam.capitalize()
 
         #Query de database voor de 2 waarden die nodig zijn om in te mogen loggen.
         cursor.execute("SELECT * FROM passagier WHERE ticketnummer = %s AND achternaam = %s", (ticketnummer, achternaam))

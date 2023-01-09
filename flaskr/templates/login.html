@@ -10,9 +10,30 @@
             <div class="loginfront"> 
                     <h1>Login Page Corendon</h1>
             </div>
-
+                <div class="login-box">
+                    <h2>Login</h2>
+                    <form method="post">
+                      <div class="user-box">
+                        <input type="name" name="achternaam" required>
+                        <label for="lname"><b>Lastname</b></label>
+                      </div>
+                      <div class="user-box">
+                        <input type="password" name="ticketnummer" required>
+                        <label for="tnmb"><b>Ticketnumber</b></label>
+                      </div>
+                      <a href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <button type="submit">Login</button>
+                      </a>
+                    </form>
+                </div>
+            </div>
+        <div class="footer">
             <div class="content">
-                {% block content %}
+            {% block content %}
 	                {% with messages = get_flashed_messages() %}
 		                {% if messages %}
 			                {% for msg in messages %}
@@ -21,21 +42,6 @@
 		                {% endif %}
 	                {% endwith %}
                 {% endblock %}
-                <h1>
-                    Log in with your lastname and ticketnumber!
-                </h1>
-                <form method="post">
-                <label for="lname"><b>Lastname</b></label>
-                <input type="achternaam" placeholder="Enter Lastname" name="achternaam" required>
-
-                <label for="tnmb"><b>ticketnumber</b></label>
-                <input type="ticketnummer" placeholder="Enter ticketnummer" name="ticketnummer" required>
-
-                <button type="submit">Login</button>
-                </form>
-                
-                    
-                
             </div>
         </div>
     </body>
