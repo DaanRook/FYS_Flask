@@ -240,6 +240,7 @@ td{
 @media only screen and (max-width: 600px){
     .waviy{
         font-size: 20px;
+        margin-top: 45%;
     }
     .weather{
         margin-top: 65%;
@@ -248,13 +249,44 @@ td{
     .co{
         transform: scale(0.5);
     }
+    .navbar ul li{
+        list-style: none;
+        display: flex;
+        margin: 0 20px;
+        position: relative;
+    }
+    .content{
+        font-size: 0.7em;
+    }
+    .footer{
+        font-size: 0.8em;
+    }
+    .login-box form a {
+        position: relative;
+        display: inline-block;
+        padding: 10px 20px;
+        color: #03e9f4;
+        font-size: 30px;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: .5s;
+        margin-top: 40px;
+        margin-left: 25%;
+        letter-spacing: 4px
+    }
+    .sizelogin{
+        transform: scale(1.5);
+    }
+    .login-box {
+        transform: scale(1.2);
+    }
 }
 
 /*Login*/
 
 .login-box {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     width: 400px;
     padding: 40px;
