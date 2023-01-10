@@ -197,44 +197,44 @@ button:hover{
 }
 
 .game{
-    margin-bottom: 10%;
-    margin-left: 25%;
+  margin-bottom: 10%;
+  margin-left: 25%;
 }
 
 #game{
-    border: 5px solid aliceblue;
-    left: 25%;
+  border: 5px solid aliceblue;
+  left: 25%;
 }
 
 .loginfront{
-    padding: 45px;
-    text-align: center;
-    background: url(WallpaperSky.jpg);
-    color: white;
-    font-size: 30px;
+  padding: 45px;
+  text-align: center;
+  background: url(WallpaperSky.jpg);
+  color: white;
+  font-size: 30px;
 }
 
 table, th, td{
-    border: 1px solid;
+  border: 1px solid;
     
 }
 
 td{
-    text-align: center;
+  text-align: center;
 }
 
 .center{
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .weather{
-    width: 100%;
-    background-position: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 10vw;
+  width: 100%;
+  background-position: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10vw;
 }
 
 @media only screen and (max-width: 600px){
@@ -244,9 +244,6 @@ td{
     }
     .weather{
         margin-top: 65%;
-        transform: scale(0.5);
-    }
-    .co{
         transform: scale(0.5);
     }
     .navbar ul li{
@@ -261,25 +258,6 @@ td{
     .footer{
         font-size: 0.8em;
     }
-    .login-box form a {
-        position: relative;
-        display: inline-block;
-        padding: 10px 20px;
-        color: #03e9f4;
-        font-size: 30px;
-        text-decoration: none;
-        text-transform: uppercase;
-        transition: .5s;
-        margin-top: 40px;
-        margin-left: 25%;
-        letter-spacing: 4px
-    }
-    .sizelogin{
-        transform: scale(1.5);
-    }
-    .login-box {
-        transform: scale(1.2);
-    }
 }
 
 /*Login*/
@@ -288,7 +266,7 @@ td{
     position: absolute;
     top: 55%;
     left: 50%;
-    width: 400px;
+    width: 800px;
     padding: 40px;
     transform: translate(-50%, -50%);
     background: rgba(133, 188, 239, 0.5);
@@ -312,7 +290,7 @@ td{
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
-    color: #fff;
+    color: rgb(51, 120, 167);
     margin-bottom: 30px;
     border: none;
     border-bottom: 1px solid #fff;

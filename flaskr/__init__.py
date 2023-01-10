@@ -77,11 +77,11 @@ def weatherpage():
 
 @app.route("/infopage")
 def infopage():
-    achternaam = session["achternaam"]
     if "achternaam" in session:
+        achternaam = session["achternaam"]
         cursor.execute("SELECT * FROM passagier WHERE achternaam = %s", (achternaam,))
         row = cursor.fetchone()
-        return render_template("infopage.html", row=row, achternaam=session["achternaam"])
+        return render_template("infopage.html", achternaam=session["achternaam"], row=row)
     else:
         return redirect("/login")
 
